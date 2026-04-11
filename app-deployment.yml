@@ -13,7 +13,7 @@ spec:
   selector:
     matchLabels:
       app: su-app
-  templates:
+  template:
     metadata:
       labels:
         app: su-app
