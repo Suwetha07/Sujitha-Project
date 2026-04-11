@@ -15,7 +15,7 @@ spec:
       app: su-app
   templates:
     metadata:
-      labels: su-app
+      labels:
         app: su-app
     spec:
       conatiners:
