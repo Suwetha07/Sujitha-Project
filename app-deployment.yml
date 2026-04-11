@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: front-end-Deployment
+  namespace: suwetha-ns 
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  selector:
+    matchLables:
+      app: su-app
+  templates:
+    metadata:
+      labels: su-app
+        app: su-app
+    spec:
+      conatiners:
+        - name: register-image 
+         image: suwetha07/registerimage:v1.0.0
+         port:
+           - containerPort: 4000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-Service
+  namespace: suwetha-ns 
+spec:
+  selector:
+    app: su-app
+  ports:
+    -port: 4000
+    targetPort: 4000
+  type: NodePort    
+
+         
