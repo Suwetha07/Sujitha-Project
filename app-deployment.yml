@@ -20,7 +20,7 @@ spec:
     spec:
       conatiners:
         - name: register-image 
-         image: suwetha07/registerimage:v1.0.0
+         image: suwetha07/registerimage:v1.1.0
          port:
            - containerPort: 4000
 ---
