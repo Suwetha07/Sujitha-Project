@@ -18,7 +18,7 @@ spec:
       labels:
         app: su-app
     spec:
-      conatiners:
+      containers:
       - name: register-image 
         image: suwetha07/registerimage:v1.1.0
         ports:
