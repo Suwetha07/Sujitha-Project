@@ -21,8 +21,8 @@ spec:
       conatiners:
         - name: register-image 
          image: suwetha07/registerimage:v1.1.0
-         port:
-           - containerPort: 4000
+         ports:
+           - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
