@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: front-end-Deployment
+  name: sujithafrontend
   namespace: suwetha-ns 
 spec:
   replicas: 1
